@@ -1,3 +1,9 @@
+'''facts of print() -> print(OBJECT SEPERATOR END FILE FLUSH)
+by using end = ' ' ; it prints  the text before that
+Default value of file = sys.stdout(screen)
+flush = boolean, specifying if o/p is flushed/buffered ;  Default = False
+type(object) will  give you the datatype of object'''
+
 #print multiple lines of the specified format
 poem = '''Whose lobster is that? I think I know.
 Its owner is quite happy though.
@@ -31,8 +37,3 @@ print('\nThe value stored in X is {} and Y is {}'.format(x,y))
 z = int(input(('Enter a number which would store in z : ')))
 print('The number stored in z is : {} , the type is : {}'.format(z,type(z)))
 
-# facts of print() -> print(OBJECT SEPERATOR END FILE FLUSH)
-# by using end = ' ' ; it prints  the text before that
-# Default value of file = sys.stdout(screen)
-# flush = boolean, specifying if o/p is flushed/buffered ;  Default = False
-# type(object) will  give you the datatype of object
