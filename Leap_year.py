@@ -7,6 +7,8 @@ The condition for Leap year are :
 so point (1,2) -> AND ; point 3 -> OR
 '''
 
+#calender module to print month calender
+#to print the calender expression -> calender.month(year,month)
 import calendar
 
 year =   int(input('Enter the Year in number format: '))
