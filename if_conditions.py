@@ -1,4 +1,6 @@
 '''
+to make if else in single statement : 'statement' if(cond) else 'statement'
+To see the number is Posivite/Negative/Zero -> Use elif statement
 For checking the numner is even -> divide by 2 and find the remainder is 0 -> (% Modulo)
 '''
 
