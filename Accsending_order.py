@@ -4,7 +4,6 @@
 3. please check the index as it starts from 0 -> so length must be x+1
 '''
 
-
 limit = int(input("Enter the limit: "))
 #print(limit)
 list_of_numbers = []
