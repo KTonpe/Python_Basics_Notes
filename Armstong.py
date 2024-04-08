@@ -14,8 +14,6 @@ from generating from the given length
 we need start_range = 10**(length of numbrs-1)
 '''
 
-
-
 #to check wheather the number is a Armstrong number or not.
 number = input("Enter a number : ")
 temp = int(number)
