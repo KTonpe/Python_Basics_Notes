@@ -6,10 +6,10 @@ Log (base=  number) ^ (result) = (power) -> number^power = result
 
 
 
-# count = 10
-# number = int(input("Enter a number for power Table: "))
-# for i in range(count+1):
-#     print(f'{number} raised to the power {i} = {number ** i}')
+count = 10
+number = int(input("Enter a number for power Table: "))
+for i in range(count+1):
+    print(f'{number} raised to the power {i} = {number ** i}')
 
 
 '''#Using map and list
@@ -31,6 +31,7 @@ for i in range(result):
     for j in range(result):
         if i ** j == result:
             print(f'{i} to the power of {j} is {i ** j}')
+else : print(f'Sry, Base and power can\'t be found for {result}')
 
 # result = int(input('Enter a number to find its number: '))
-# for exponent in range(2,result**0.5)
+# for exponent in range(2,result**0.5):

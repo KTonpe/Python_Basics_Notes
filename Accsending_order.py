@@ -9,7 +9,7 @@ limit = int(input("Enter the limit: "))
 list_of_numbers = []
 for i in range(0,limit):
     #list_of_numbers.append(int(input("Enter the number: ")))
-    num = int(input("Enter the number: "))
+    num = int(input(f"Your {i}.number is : "))
     list_of_numbers += [num]
 
 list_of_numbers.sort() #arranged in asscending order
