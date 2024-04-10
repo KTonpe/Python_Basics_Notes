@@ -7,7 +7,11 @@ import unittest
 def assending(list_of_numbers):
     list_of_numbers.sort()
     return  list_of_numbers
+def dessending(list_of_numbers):
+    list_of_numbers.sort(reverse=True)
+    return list_of_numbers
 
+#added unittest for sorting in asscending order
 class Testordering(unittest.TestCase):
     def test_assending(self):
         self.assertEqual(assending(assending([5, 3, 4, 1, 2])), [1, 2, 3, 4, 5])
@@ -19,8 +23,9 @@ limit = int(input("Enter the limit: "))
 for i in range(1,limit+1):
     list_of_numbers.append(int(input(f'Emter {i}.number : ')))
 
-Order_list = assending(list_of_numbers)
-print(Order_list)
+choice = int(input('\nPress "1" for assending order: \nPress "2" for descending order : '))
+if choice == 1: print(f'\nIn Ascending order is {assending(list_of_numbers)}')
+else : print(f'In Descending order is {dessending(list_of_numbers)}')
 unittest.main()
 
 
