@@ -14,9 +14,13 @@ def dessending(list_of_numbers):
 #added unittest for sorting in asscending order
 class Testordering(unittest.TestCase):
     def test_assending(self):
-        self.assertEqual(assending(assending([5, 3, 4, 1, 2])), [1, 2, 3, 4, 5])
+        self.assertEqual(assending([5, 3, 4, 1, 2]), [1, 2, 3, 4, 5])
+    def test_dessending(self):
+        self.assertEqual(dessending([5, 3, 4, 1, 2]), [5,4,3,2,1])
     def test_with_similar_numnbers(self):
-        self.assertEqual(assending(assending([5, 3, 3, 1, 2])), [1, 2, 3, 3, 5])
+        self.assertEqual(assending([5, 3, 3, 1, 2]), [1, 2, 3, 3, 5])
+    def test_with_similar_numnber_descend(self):
+        self.assertEqual(dessending([5, 3, 3, 1, 2]), [5,3,3,2,1])
     
 list_of_numbers = []
 limit = int(input("Enter the limit: "))
