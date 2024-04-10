@@ -17,9 +17,11 @@ print(list_of_numbers)
 list_of_numbers.sort(reverse=True) #arranged in descending order
 print(list_of_numbers)
 
+'''
+#to print only the given number in a list
 location = int(input('Enter the location: '))
 number = int(input('Enter the number: '))
 list_of_num =[0]*(location+1) #adding 0s in the list of length location+1
 list_of_num[location] = number 
 
-print(list_of_num,len(list_of_num))
+print(list_of_num,len(list_of_num))'''
