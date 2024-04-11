@@ -58,10 +58,10 @@ class Testing_leap_logic(unittest.TestCase):
         self.assertEqual(result, f'{self.multiple_of_four} is a leap year')
         if (self.multiple_of_four > 0) : print(calendar.month(year, month)) if (month > 0 and month < 13) else print(f'give a valid {month} \n')
 
-year =   int(input('Enter the Year in number format: '))
-month  = int(input('Month in number format: '))
-leap_year(year, month)
 unittest.main()
+year =   int(input('Enter the Year in number format: '))
+#month  = int(input('Month in number format: '))
+print(leap_year(year))
 
 '''if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0): print(f'{year} is a leap year')
 else: print(f'{year} is not a leap year')'''

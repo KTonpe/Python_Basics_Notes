@@ -23,16 +23,17 @@ class Testordering_Dessend(unittest.TestCase):
     def test_with_similar_numnber_descend(self):
         self.assertEqual(dessending([5, 3, 3, 1, 2]), [5,3,3,2,1])
     
-unittest.main() #invoke unittest
 list_of_numbers = []
-limit = int(input("Enter the limit: "))
+limit = int(input("Enter the how many numbers you want to operate on: "))
 for i in range(1,limit+1):
-    list_of_numbers.append(int(input(f'Emter {i}.number : ')))
+    list_of_numbers.append(int(input(f'Enter {i}.number : ')))
 
 choice = int(input('\nPress "1" for assending order: \nPress "2" for descending order : '))
 if choice == 1: print(f'\nIn Ascending order is {assending(list_of_numbers)}')
-else : print(f'In Descending order is {dessending(list_of_numbers)}')
+elif choice == 2 : print(f'In Descending order is {dessending(list_of_numbers)}')
+else : print('Enter between 1 and 2 only')
 
+unittest.main() #invoke unittest
 
 
 
