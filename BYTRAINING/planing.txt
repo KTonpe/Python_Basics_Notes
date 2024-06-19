@@ -1,0 +1,1951 @@
+Python, we can understand that it is a high-level object-oriented programming language that was created by Guido van Rossum. 
+
+Python is also known as a general-purpose programming language, as it is used in the domains given below:
+Web Development
+Software Development
+Game Development
+AI & ML
+Data Analytics
+
+Python is one of the most popular programming languages available today. It is widely used in various sectors of business, such as programming, web development, machine learning, and data science.
+
+Why Python Programming?
+Let us explore the reasons as to why we prefer python programming over any other language.
+
+Purpose and Versatility of Python:
+-----------------------------------
+Python serves various purposes across different domains.
+
+Due to its simplicity and powerful libraries, Python sees wide usage in data science, machine learning, and artificial intelligence.
+
+JavaScript is popular among web developers for building user interfaces using frameworks like React, Vue, and Angular.
+
+General-Purpose Language:
+-----------------------
+Python is a general-purpose programming language used across many domains.
+It’s simple to understand, scalable, and supports fast development.
+
+Accessibility and Simplicity:
+-----------------------------
+Python’s syntax is straightforward, similar to English, enabling developers to write concise code.
+It’s accessible to beginners without a programming background.
+Open-Source and Rich Libraries:
+Python is open-source with a vast array of libraries that enhance developer productivity.
+Developers can focus on business logic due to readily available tools.
+
+Digital Era Skills:
+-------------------
+Python is in high demand in the digital era due to its ability to handle large datasets.
+
+DATA TYPES
+========
+Data Type represents the type of data present inside a variable.
+In Python we are not required to specify the type explicitly. Based on value provided, the type will be assigned automatically. Hence Python is dynamically Typed Language.
+
+Python contains the following inbuilt data types:
+-------------------------------------------------
+1) Int
+2) Float
+3) Complex
+4) Bool
+5) Str
+6) Bytes
+7) Bytearray
+8) Range
+9) List
+10) Tuple
+11) Set
+12) Frozenset
+13) dict
+14) None
+
+Note: Python contains several inbuilt functions
+
+1) type()
+to check the type of variable
+
+2) id()
+to get address of object
+
+3) print()
+to print the value
+
+Note: In Python everything is an Object
+
+
+int Data Type:
+============
+We can use int data type to represent whole numbers (integral values)
+
+Eg: a = 10
+
+type(a) #int
+
+Note:
+======
+In Python2 we have long data type to represent very large integral values.
+But in Python3 there is no long type explicitly and we can represent long values also by using int type .
+
+Float Data Type:
+==================
+We can use float data type to represent floating point values (decimal values)
+ Eg: f = 1.234
+ type(f) # float
+
+We can also represent floating point values by using exponential form 
+(Scientific Notation)
+
+ Eg: f = 1.2e3  instead of 'e' we can use 'E'
+ print(f) 1200.0
+
+The main advantage of exponential form is we can represent big values in less 
+memory.
+
+Complex Data Type:
+==================
+A complex number is of the form
+real + imaginarypart
+Ex: a + bj
+
+‘a’ and ‘b’ contain Integers OR Floating Point Values
+
+ Eg: 
+  e=3 + 5j
+  type(e)
+ 10 + 5.5j
+ 0.5 + 0.1
+
+
+In the real part if we use int value then we can specify that either by decimal, octal,binary or hexa decimal form.
+
+But imaginary part should be specified only by using decimal form.
+
+a=0B11+5j 
+ print(a) 
+(3+5j) 
+
+a=3+0B11j 
+SyntaxError: invalid syntax
+
+
+Even we can perform operations on complex type values.
+>>> a=10+1.5j 
+>>> b=20+2.5j 
+>>> c=a+b 
+>>> print(c) # (30+4j) 
+
+Note: Complex data type has some inbuilt attributes to retrieve the real part and 
+imaginary part
+
+c = 10.5+3.6j
+c.real  -> 10.5
+c.imag  -> 3.6
+
+We can use complex type generally in scientific Applications and electrical engineering Applications.
+
+
+bool Data Type:
+=================
+We can use this data type to represent boolean values.
+The only allowed values for this data type are:
+True and False
+
+Internally Python represents True as 1 and False as 0
+ 
+b = True
+type(b) bool
+
+Eg:
+a = 10
+b = 20
+c = a<b
+print(c)  True
+
+str Data Type:
+==============
+str represents String data type.
+
+A String is a sequence of characters enclosed within single quotes or double 
+quotes.
+
+s1='blueyonder'
+s2="blueyonder"
+
+
+bytes Data Type:
+=================
+bytes data type represents a group of byte numbers just like an array.
+
+x = [10,20,30,40] 
+b = bytes(x) 
+type(b)      #bytes 
+print(b[0])   # 10
+print(b[-1])   #40 
+
+for i in b : print(i) 
+or
+for i in b : 
+ print(i)
+
+Conclusion 1:
+The only allowed values for byte data type are 0 to 256. By mistake if we are trying to provide any other values then we will get value error.
+
+Conclusion 2:
+Once we creates bytes data type value, we cannot change its values, other wise we will get TypeError
+
+
+bytearray Data Type:
+====================
+bytearray is exactly same as bytes data type except that its elements can be modified.
+
+x = [10,20,30,40] 
+b = bytearray(x) 
+type(b)      #bytearray
+print(b[0])   # 10
+print(b[-1])   #40 
+
+for i in b : print(i) 
+
+b[0]=50
+
+print(b[0]) #re-assignment
+
+
+Range Data Type:
+================
+range Data Type represents a sequence of numbers.
+The elements present in range Data type are not modifiable. 
+
+i.e range Data type is immutable.
+
+case1 : range(10)
+generate numbers from 0 to 9
+
+Eg:
+r = range(10)
+for i in r : print(i)
+
+
+case-2: range(10, 20)
+generate numbers from 10 to 19
+
+Eg:
+r = range(10,20)
+for i in r : print(i)
+
+
+case-3: range(10, 20, 2)
+2 means increment value
+Eg:
+r = range(10,20,2)
+for i in r : print(i)
+
+or
+
+for i in range(1,10,2):
+	print(i)
+
+
+We can access elements present in the range Data Type by using index.
+Eg:
+r = range(10,20)
+type(r)
+r[0] 
+r[15]  #IndexError: range object index out of range
+
+We cannot modify the values of range data type
+Eg:
+r[0] = 100
+TypeError: 'range' object does not support item assignment
+
+
+We can create a list of values with range data type
+Eg:
+l = list(range(10)) 
+print(l) 
+output:
+--------
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+
+LIST:
+=====
+If we want to represent a group of individual objects as a single entity where insertion 
+order preserved and duplicates are allowed, then we should go for List.
+insertion order preserved.
+duplicate objects are allowed.
+heterogeneous objects are allowed.
+
+List is dynamic because based on our requirement we can increase the size and decrease the size.
+
+In List the elements will be placed within square brackets and with comma seperator.
+
+We can differentiate duplicate elements by using index and we can preserve insertion 
+order by using index. Hence index will play very important role.
+
+Python supports both positive and negative indexes. +ve index means from left to 
+right where as negative index means right to left. 
+
+l1=[10,"A","B",20, 30, 10] 
+ 
+ 0  1 2  3 4  5
+|10|A|B|20|30|10|
+ -6-5-4 -3 -2 -1      
+
+List objects are mutable. i.e we can change the content.
+
+Creation of List Objects:
+==========================
+We can create empty list object as follows...
+
+list=[]  
+print(list) 
+print(type(list)) 
+ 
+If we know elements already then we can create list as follows list = [10, 20, 30, 40]
+
+With Dynamic Input:
+-------------------
+list=eval(input("Enter List:")) 
+
+print(list) 
+print(type(list)) 
+
+With list() Function:
+---------------------
+l=list(range(0,10,2)) 
+print(l) 
+print(type(l)) 
+
+ls="blueyonder" 
+l=list(ls) 
+print(l)
+
+
+With split() Function:
+=======================
+s="Welome to python !!!" 
+l=s.split() 
+
+print(l) 
+print(type(l))
+
+Accessing Elements of List:
+---------------------------
+We can access elements of the list either by using index or by using slice operator(:)
+
+By using Index:
+----------------
+List follows zero based index. ie index of first element is zero.
+List supports both +ve and -ve indexes.
++ve index meant for Left to Right
+-ve index meant for Right to Left
+
+list = [10, 20, 30, 40]
+print(list[0])
+print(list[-1])
+print(list[10]) 
+ 		->IndexError: list index out of range
+
+By using Slice Operator:
+------------------------
+Syntax: list2 = list1[start:stop:step]
+
+Start -> It indicates the Index where slice has to Start
+ 	Default Value is 0
+
+Stop -> It indicates the Index where slice has to End
+ 	Default Value is max allowed Index of List ie Length of the List
+
+Step -> increment value
+	Default Value is 1
+
+n=[1,2,3,4,5,6,7,8,9,10] 
+
+print(n[2:7:2]) #[3 5 7]
+
+
+print(n[4::2])  #[5,7,9]
+Note: We used a step value of 2. This means the list will jump two steps repeatedly during the iteration.
+
+print(n[3:7]) #[4,5,6,7]
+print(n[8:2:-2]) #[9,7,5]
+print(n[4:100]) #[5,6,7,8,9,10]
+
+
+List vs Mutability:
+====================
+Once we creates a List object, we can modify its content. Hence List objects are mutable.
+
+n=[10,20,30,40] 
+print(n) # [10,20,30,40] 
+n[1]=777 #re-assignment -it will replace
+print(n) #[10,777,30,40]
+
+
+Important Functions of List:
+============================
+1) len():
+ Returns the number of elements present in the list
+ Eg: n = [10, 20, 30, 40]
+ print(len(n) -> 4
+
+2) count():
+ It returns the number of occurrences of specified item in the list
+
+n=[1,2,2,2,2,3,3] 
+print(n.count(1))  ->1
+print(n.count(2))  ->4
+print(n.count(3))  ->2
+print(n.count(4))  ->0
+print(len(n))
+
+
+3) index():
+ Returns the index of first occurrence of the specified item.
+
+n = [1, 2, 2, 2, 2, 3, 3] 
+print(n.index(1))    -> 0 
+print(n.index(2))    -> 1 
+print(n.index(3))    -> 5 
+print(n.index(4))    -> ValueError: 4 is not in list
+
+
+4) append() Function:
+ We can use append() function to add item at the end of the list.
+
+li=[] 
+li.append("A") 
+li.append("B") 
+li.append("C") 
+print(li)
+
+5)insert() Function:
+ To insert item at specified index position
+
+n=[1,2,3,4,5] 
+n.insert(1,888) 
+print(n)
+
+6)extend() Function:
+ To add all items of one list to another list
+Ex:
+ l1.extend(l2)
+ all items present in l2 will be added to l1
+
+7)remove() Function:
+We can use this function to remove specified item from the list. If the item present 
+multiple times then only first occurrence will be removed.
+
+n=[10,20,10,30] 
+n.remove(10) 
+print(n)
+
+8)pop() Function:
+It removes and returns the last element of the list.
+This is only function which manipulates list and returns some element.
+
+n=[10,20,30,40] 
+print(n.pop()) 
+print(n.pop()) 
+print(n)
+
+9)reverse():
+ We can use to reverse() order of elements of list.
+
+n=[10,20,30,40] 
+n.reverse() 
+print(n)
+
+10)sort():
+In list by default insertion order is preserved. If want to sort the elements of list 
+according to default natural sorting order then we should go for sort() method.
+
+For numbers  Default Natural sorting Order is Ascending Order
+For Strings  Default Natural sorting order is Alphabetical Order
+
+n = [20,5,15,10,0] 
+n.sort() 
+print(n)
+	->[0,5,10,15,20] 
+
+s = ["Dog","Banana","Cat","Apple"] 
+s.sort() 
+print(s) 
+	->['Apple','Banana','Cat','Dog'] 
+
+Note: To use sort() function, compulsory list should contain only homogeneous elements. 
+Otherwise we will get TypeError
+
+n=[20,10,"A","B"] 
+n.sort() 
+	->TypeError: '<' not supported between instances of 'str' and 'int'
+print(n) 
+
+Descending order:
+-----------------
+We can sort according to reverse of default natural sorting order by using reverse=True 
+argument.
+
+n = [40,10,30,20] 
+n.sort() 
+print(n)
+n.sort(reverse = True) 
+print(n) 
+n.sort(reverse = False) 
+print(n) 	
+
+
+Concatenation Operator (+):
+---------------------------
+ We can use + to concatenate 2 lists into a single list
+a = [10, 20, 30] 
+b = [40, 50, 60] 
+c = a+b 
+print(c)
+
+Repetition Operator (*):
+--------------------------
+We can use repetition operator * to repeat elements of list specified number of times.
+x = [10, 20, 30] 
+y = x*3 
+print(y)
+
+Membership Operators:
+---------------------
+We can check whether element is a member of the list or not by using membership 
+operators.
+1) in Operator
+2) not in Operator
+
+n=[10,20,30,40] 
+print (10 in n)    
+print (10 not in n) 
+print (50 in n) 
+print (50 not in n)
+
+
+clear() Function:
+-----------------
+We can use clear() function to remove all elements of List.
+
+n=[10,20,30,40] 
+print(n) 
+n.clear() 
+print(n)
+
+Nested Lists:
+-----------
+Sometimes we can take one list inside another list. Such type of lists are called nested lists.
+   0   1   2
+n=[10,20,[30,40]] 
+print(n) 
+print(n[0]) 
+print(n[2]) 
+print(n[2][0]) 
+print(n[2][1])
+
+
+TUPLE:
+======
+Tuple is exactly same as List except that it is immutable. i.e once we creates Tuple 
+object, we cannot perform any changes in that object.
+
+Hence Tuple is Read only version of List.
+
+If our data is fixed and never changes then we should go for Tuple.
+Insertion Order is preserved
+Duplicates are allowed
+Heterogeneous objects are allowed.
+
+Tuple has insertion order is preserved and we can differentiate duplicate objects by using 
+index. Hence index will play very important role in Tuple also.
+
+Tuple support both +ve and -ve index. +ve index means forward direction (from left to 
+right) and -ve index means backward direction (from right to left)
+
+We can represent Tuple elements within Parenthesis and with comma separator.
+Parenthesis are optional but recommended to use.
+
+Ex:
+---
+t1=10,20,30,40 
+print(t1) 
+print(type(t1)) 
+
+
+Tuple Creation:
+-----------------
+1) t = ()
+ Creation of Empty Tuple
+
+2) t = (10)
+print(type(t)) -int
+print(t) ->10
+
+t = (10,)
+print(type(t)) ->Tuple
+print(t) ->(10,)
+
+t = 10,
+ Creation of Single valued Tuple, Parenthesis are Optional, should ends with Comma
+
+3) t = 10, 20, 30
+t = (10, 20, 30)
+ Creation of multi values Tuples & Parenthesis are Optional
+
+4)By using tuple() Function:
+
+list=[10,20,30] 
+t=tuple(list) 
+print(t) 
+
+t=tuple(range(10,20,2)) 
+print(t) 
+
+t=tuple(10,30,50)  //TYPEError
+print(t)
+
+
+Tuple vs Immutability:
+======================
+Once we creates tuple, we cannot change its content.
+Hence tuple objects are immutable.
+Eg:
+t = (10, 20, 30, 40)
+t[1] = 70 
+	 -> TypeError: 'tuple' object does not support item assignment
+
+
+Important Functions of Tuple:
+=============================
+1) len()
+ To return number of elements present in the tuple.
+ Eg: t = (10,20,30,40)
+ print(len(t)) -> 4
+
+2) count()
+ To return number of occurrences of given element in the tuple
+ Eg: t = (10, 20, 10, 10, 20)
+ print(t.count(10)) -> 3
+
+3) index()
+Returns index of first occurrence of the given element.
+If the specified element is not available then we will get ValueError.
+ 
+ Eg: t = (10, 20, 10, 10, 20)
+ print(t.index(10)) -> 0
+ print(t.index(30)) -> ValueError: tuple.index(x): x not in tuple
+
+4)sorted()
+ To sort elements based on default natural sorting order
+Eg: t=(40,10,30,20) 
+t1=sorted(t) 
+print(t1) 
+print(t) 
+
+Output
+[10, 20, 30, 40] 
+(40, 10, 30, 20) 
+
+We can sort according to reverse of default natural sorting order as follows
+t1 = sorted(t, reverse = True)
+print(t1) ->[40, 30, 20, 10]
+
+
+SET:
+====
+If we want to represent a group of unique values as a single entity then we should go for set.
+
+Duplicates are not allowed.
+
+Insertion order is not preserved. But we can sort the elements.
+
+Indexing and slicing not allowed for the set.
+
+Heterogeneous elements are allowed.
+
+Set objects are mutable, i.e once we creates set object we can perform any changes in 
+that object based on our requirement.
+
+We can represent set elements within curly braces and with comma separation
+
+We can apply mathematical operations like union, intersection, difference(minus) etc on set objects.
+
+Creation of Set Objects:
+========================
+s={10,20,30,40}  
+print(s) 
+print(type(s)) 
+
+We can create set objects by using set() Function s = set(any sequence)
+
+Eg 1:
+----
+l = [10,20,30,40,10,20,10] 
+s=set(l) 
+print(s) # {40, 10, 20, 30} 
+
+Eg 2:
+s=set(range(5)) 
+print(s) #{0, 1, 2, 3, 4} 
+
+Eg:3
+s={}
+print(type(s))
+
+
+
+Note:
+While creating empty set we have to take special care.
+Compulsory we should use set() function.
+s = {} -> It is treated as dictionary but not empty set.
+
+
+Important Functions of Set:
+----------------------------
+1.add(x):Adds item x to the set.
+
+s={10,20,30} 
+s.add(40); 
+print(s) #{40, 10, 20, 30}
+
+2.update(x,y,z):
+To add multiple items to the set.
+
+Arguments are not individual elements and these are Iterable objects like List, Range etc.
+All elements present in the given Iterable objects will be added to the set.
+
+s={10,20,30} 
+l=[40,50,60,10] 
+
+s.update(l,range(5)) 
+print(s)
+
+Output: {0, 1, 2, 3, 4, 40, 10, 50, 20, 60, 30}
+
+What is the difference between add() and update() Functions in Set?
+
+We can use add() to add individual item to the Set,where as we can use update() 
+function to add multiple items to Set.
+
+add() function can take only one argument where as update() function can take any 
+number of arguments but all arguments should be iterable objects
+
+which of the following are valid for set s?
+1) s.add(10)
+2) s.add(10,20,30) -> TypeError: add() takes exactly one argument (3 given)
+3) s.update(10) ->TypeError: 'int' object is not iterable
+4) s.update(range(1,10,2),range(0,10,2))
+
+3.copy():
+Returns copy of the set.
+It is cloned object.
+
+s = {10,20,30} 
+s1 = s.copy() 
+print(s1) 
+
+4.pop():
+ It removes and returns some random element from the set.
+
+s={40,10,30,20} 
+print(s) 
+print(s.pop()) 
+print(s) 
+
+5.remove(x):
+It removes specified element from the set.
+If the specified element not present in the Set then we will get KeyError.
+
+s = {40, 10, 30, 20} 
+s.remove(30)
+s.remove(50)
+print(s)
+
+6.discard(x):
+It removes the specified element from the set.
+If the specified element not present in the set then we won't get any error.
+
+s = {10, 20, 30} 
+s.discard(10) 
+print(s)
+s.discard(50)
+print(s.discard(50))
+print(s)
+
+
+7.clear():
+ To remove all elements from the Set.
+s={10,20,30} 
+print(s) 
+s.clear() 
+print(s) 
+
+Operations on the Set:
+-----------------------
+1) union():
+x.union(y) -> We can use this function to return all elements present in both sets
+x.union(y) OR x|y.
+
+x = {10, 20, 30, 40} 
+y = {30, 40, 50, 60} 
+print (x.union(y)) 
+print (x|y) 
+
+2) intersection():
+x.intersection(y) OR x&y.
+Returns common elements present in both x and y.
+
+x = {10, 20, 30, 40} 
+y = {30, 40, 50, 60} 
+
+print (x.intersection(y)) 
+print(x&y)
+
+3) difference():
+x.difference(y) OR x-y.
+Returns the elements present in x but not in y.
+
+x = {10, 20, 30, 40} 
+y = {30, 40, 50, 60} 
+
+print (x.difference(y))  ->{10,20}
+print (x-y)   ->{10,20}
+print (y-x)   ->{50,60}
+
+Membership Operators: (in, not in)
+-----------------------------------
+s=set("blueyonder") 
+print(s) 
+print('d' in s) 
+print('z' in s) 
+
+Set Comprehension:
+==================
+Set comprehension is possible.
+s = {x*x for x in range(5)} 
+print (s) -> {0, 1, 4, 9, 16} 
+ 
+s = {2**x for x in range(2,10,2)} 
+print (s) -> {16, 256, 64, 4} 
+
+DICTIONARY:
+===========
+We can use List, Tuple and Set to represent a group of individual objects as a single 
+entity.
+
+If we want to represent a group of objects as key-value pairs then we should go for Dictionary.
+
+EX:
+===
+rollno ---- name
+phone number -- address
+ipaddress --- domain name
+
+Duplicate keys are not allowed but values can be duplicated.
+Heterogeneous objects are allowed for both key and values.
+Dictionaries are mutable
+Dictionaries are dynamic
+indexing and slicing concepts are not applicable
+
+Note: In C++ and Java Dictionaries are known as "Map" where as in Perl and Ruby it is known as "Hash"
+
+How to Create Dictionary?
+
+d = {} OR d = dict()
+
+We are creating empty dictionary. We can add entries as follows
+
+d[10]="sai" 
+d[100]="ruban" 
+d[200]="shiva" 
+
+print(d)  {10: 'sai', 100: 'ruban', 200: 'shiva'} 
+
+If we know data in advance then we can create dictionary as follows : d = {key:value, key:value}
+Ex:
+
+How to Access Data from the Dictionary?
+----------------------------------------
+We can access data by using keys.
+
+d = {10:'sai' ,100:'ruban', 200:'shiva'}
+ 
+print(d[100]) #ruban 
+print(d[200]) #shiva
+
+If the specified key is not available then we will get KeyError
+print(d[400])  KeyError: 400
+
+How to Update Dictionaries?
+---------------------------
+d[key] = value
+
+If the key is not available then a new entry will be added to the dictionary with the 
+specified key-value pair
+
+If the key is already available then old value will be replaced with new value.
+d = {10:'sai' ,100:'ruban', 200:'shiva'} 
+print(d) 
+
+d[400]="pavan" 
+print(d) 
+
+d[100]="sunny" 
+print(d) 
+
+
+How to Delete Elements from Dictionary?
+---------------------------------------
+1.del d[key]
+
+It deletes entry associated with the specified key.
+If the key is not available then we will get KeyError.
+
+d = {10:'sai' ,100:'ruban', 200:'shiva'} 
+print(d) 
+
+del d[100] 
+print(d) 
+
+del d[400]
+
+2. d.clear()
+------------
+
+To remove all entries from the dictionary.
+d = {10:'sai' ,100:'ruban', 200:'shiva'} 
+print(d) 
+
+d.clear() 
+print(d)
+
+3.del d
+--------
+To delete total dictionary. Now we cannot access d.
+d = {10:'sai' ,100:'ruban', 200:'shiva'}
+print(d) 
+
+del d  -->NameError
+print(d)
+
+Important Functions of Dictionary:
+----------------------------------
+1.dict():
+ To create a dictionary
+ d = dict() ->It creates empty dictionary
+ d = dict({100:"sai",200:"ramesh"}) ->It creates dictionary with specified elements
+ d = dict([(100,"sai"),(200,"shiva"),(300,"ramesh")])-> It creates dictionary with the given list of tuple elements
+
+2.len()
+ Returns the number of items in the dictionary.
+
+3.clear():
+ To remove all elements from the dictionary.
+
+4.get():
+ To get the value associated with the key
+Ex:
+d.get(key)
+If the key is available then returns the corresponding value otherwise returns None.It wont raise any error.
+
+d.get(key,defaultvalue)
+If the key is available then returns the corresponding value otherwise returns default value.
+
+5.pop():
+ d.pop(key) :It removes the entry associated with the specified key and returns the corresponding value.
+	     If the specified key is not available then we will get KeyError.
+
+d = {10:'sai' ,100:'ruban', 200:'shiva'}
+print(d.pop(100)) 
+print(d) 
+print(d.pop(400))
+
+6.popitems() -Search and learn it
+
+7.keys():It returns all keys associated eith dictionary.
+
+d = {10:'sai' ,100:'ruban', 200:'shiva'}
+print(d.keys()) 
+for k in d.keys(): 
+	print(k)
+
+8.values(): 
+It returns all values associated with the dictionary.
+d = {10:'sai' ,100:'ruban', 200:'shiva'}
+print(d.values()) 
+for v in d.values(): 
+  print(v)
+
+9.items():
+It returns list of tuples representing key-value pairs.
+ 	   [(k,v),(k,v),(k,v)]
+
+d = {10:'sai' ,100:'ruban', 200:'shiva'}
+
+for k,v in d.items(): 
+ print(k,"--",v) 
+
+10.copy():
+To create exactly duplicate dictionary (cloned copy)
+ d1 = d.copy();
+
+
+frozenset Data Type:
+====================
+It is exactly same as set except that it is immutable.
+Hence we cannot use add or remove functions.
+
+s=set({"apple","mango","kiwi"})
+type(s)
+
+fs = frozenset(s)
+print(type(fs))
+
+fs.add("orange") 
+
+
+None Data Type:
+================
+None means nothing or No value associated.
+If the value is not available, then to handle such type of cases None introduced.
+It is something like null value in Java.
+
+Eg:
+def m1():
+ a=10
+print(m1())
+
+
+The following are various important escape characters in python:
+
+1)\n  -> newline
+2)\t  -> horizontal tab
+3)\b   -> backspace
+4)\f  -> form feed
+5)\v   -> vertical tab
+6)\'  -> single quote
+7)\"  ->  double quote
+8) \\ ->  back slash symbol
+
+print("BlueYonde solutions")
+print("BlueYonde \n solutions")
+
+Note:
+=======
+In Python the following data types are considered as Fundamental Data types
+int 
+float
+complex
+bool
+str
+
+TYPE CASTING
+=============
+We can convert one type value to another type. This conversion is called Typecasting 
+or Type conversion.
+
+The following are various inbuilt functions for type casting.
+1) int()
+2) float()
+3) complex()
+4) bool()
+
+int():
+======
+ We can use this function to convert values from other types to int
+
+float():
+========
+ We can use float() function to convert other type values to float type.
+
+
+In python we have 33 reserve keywords
+import keyword
+keyword.kwlist
+
+
+
+What is String?
+===============
+Any sequence of characters within either single quotes or double quotes is considered as a String.
+Syntax:
+s = 'sainath'
+s = "sainath"
+
+Note:
+======
+In most of other languages like C, C++, Java, a single character with in single quotes 
+is treated as char data type value. 
+
+But in Python we are not having char data type. Hence it is treated as String only.
+Eg:
+>>> ch = 'a'
+>>> type(ch)
+<class 'str'>
+
+
+How to define multi-line String Literals?
+
+We can define multi-line String literals by using triple single or double quotes.
+Eg:
+>>> s = '''Blueyondersolutions'''
+  print(s)
+
+
+Ex:
+====
+The Python is 'programming' language
+
+We can also use triple quotes to use single quotes or double quotes as symbol inside 
+String literal
+
+1) s = 'This is ' single quote symbol'   -> invalid 
+2) s = 'This is \' single quote symbol'  ->valid
+3) s = "This is ' single quote symbol"   ->valid
+4) s = 'This is " double quotes symbol'  ->valid
+5) s = 'The "Python Notes" by 'blue' is very helpful'  ->invalid 
+6) s = "The "Python Notes" by 'blue' is very helpful"  -> invalid
+7) s = 'The \"Python Notes\" by \'blue\' is very helpful' ->valid
+8) s = '''The "Python Notes" by 'blue' is very helpful''' ->valid
+
+
+How to Access Characters of a String?
+======================================
+We can access characters of a string by using the following ways.
+1) By using index
+2) By using slice operator
+
+1)Accessing Characters By using Index:
+
+Python supports both +ve and -ve Index.
++ve Index means Left to Right (Forward Direction)
+-ve Index means Right to Left (Backward Direction)
+
+Eg: s = ''
+1) >>> s='sainath' 
+ s[0] 
+ s[4] 
+ s[-1] 
+s[10] -->Index Error
+
+
+2)Accessing Characters by using Slice Operator:
+===============================================
+Syntax: s[bEginindex:endindex:step]
+
+Begin Index: From where we have to consider slice (substring)
+End Index: We have to terminate the slice (substring) at endindex-1 
+Step: Incremented Value.
+
+Note:
+If we are not specifying bEgin index then it will consider from bEginning of the string.
+
+If we are not specifying end index then it will consider up to end of the string.
+
+The default value for step is 1.
+
+   0123456789
+s="Learning Python is very very easy!!!" 
+s[1:7:1] #earnin
+s[1:7]   #earnin
+s[1:7:2]  #eri
+s[:7] # learnin
+s[7:] #  g Python is very very easy!!!
+s[::] #  Learning Python is very very easy!!!
+s[:] #  Learning Python is very very easy!!!
+s[::-1] # reverseorder
+
+
+Behaviour of Slice Operator:
+=============================
+1) s[begin : end : step ]
+2) Step value can be either +ve or –ve
+3) If +ve then it should be forward direction(left to right) and we have to consider  begin to end-1
+4) If -ve then it should be backward direction (right to left) and we have to consider begin to end+1.
+
+***Note:
+In the backward direction if end value is -1 then result is always empty.
+In the forward direction if end value is 0 then result is always empty.
+
+
+
+In Forward Direction:
+======================
+default value for begin: 0
+default value for end: length of string
+default value for step: +1
+
+In Backward Direction:
+=======================
+default value for begin: -1
+default value for end: -(length of string+1)
+
+Note: Either forward or backward direction, we can take both +ve and -ve values for 
+begin and end index.
+
+Slice Operator Case Study:
+====================
+        0123456789 
+1) S = 'abcdefghij'
+2) s[1:6:2] #bdf
+3) s[::1] #abcdefghij
+4) s[::-1] #reverse
+5) s[3:7:-1] #
+6) s[7:4:-1] #hgf
+7) s[1:4:0] #
+
+
+Mathematical Operators for String:
+==================================
+We can apply the following mathematical operators for Strings.
+1) + operator for concatenation
+2) * operator for repetition 
+
+print("sainath"+"gupta")  sainathgupta
+print("sainath"*2)  sainathsainath
+
+Note: 
+1) To use + operator for Strings, compulsory both arguments should be str type.
+2) To use * operator for Strings, compulsory one argument should be str and other
+argument should be int.
+
+len() in-built Function:
+=======================
+We can use len() function to find the number of characters present in the string.
+Eg:
+s = 'sainath'
+print(len(s))  7
+
+input():
+========
+input() function can be used to read data directly in our required format.
+We are not required to perform type casting.
+
+x = input("Enter Value)
+type(x)
+
+Ex:
+===
+write a python program named add.py to read two inputs from keyboard and perform 
+sum of two numbers.
+
+
+
+
+Identifier
+==========
+A Name in Python Program is called Identifier.
+It can be Class Name OR Function Name OR Module Name OR Variable Name.
+
+a = 10
+
+Rules to define Identifiers in Python:
+
+1. The only allowed characters in Python are
+  alphabet symbols(either lower case or upper case)
+
+ digits(0 to 9)
+ underscore symbol(_)
+
+ By mistake if we are using any other symbol like $ then we will get syntax error.
+ cash = 10 -->valid
+ ca$h =20 ->incalid
+
+ 2. Identifier should not starts with digit
+   123total ->invalid
+   total123 -> valid
+ 
+ 3. Identifiers are case sensitive. Of course Python language is case sensitive language.
+  
+   total=10
+   TOTAL=999
+   print(total) #10
+   print(TOTAL) #999
+
+
+
+Identifier:
+===========
+1) Alphabet Symbols (Either Upper case OR Lower case)
+2) If Identifier is start with Underscore (_) then it indicates it is private.
+3) Identifier should not start with Digits.
+4) Identifiers are case sensitive.
+5) We cannot use reserved words as identifiers
+ Eg: def = 10 
+6) There is no length limit for Python identifiers. But not recommended to use too 
+lengthy identifiers.
+7) Dollor ($) Symbol is not allowed in Python
+
+Which of the following are valid Python identifiers?
+1) 123total  ->invalid
+2) total123 ->valid
+3) java2share ->valid
+4) ca$h ->invalid
+5) _abc_abc_  ->valid
+6) def ->invalid
+7) if  ->invalid
+
+Note:
+1) If identifier starts with _ symbol then it indicates that it is private
+2) If identifier starts with __(Two Under Score Symbols) indicating that strongly private identifier.
+3) If the identifier starts and ends with two underscore symbols then the identifier is language defined special name, which is also known as magic methods
+Eg: __add__
+
+
+
+Operators:
+===========
+1) Arithmetic Operators:
+
++  -> addition
+-  ->subtraction
+*  ->multiplication
+/  ->Division
+%  ->Module
+
+**  ->exponent or power operator
+
+//  ->floor Division operator
+
+test.py:
+========
+a=10
+b=2
+print('a+b=',a+b) 
+print('a-b=',a-b)
+print('a*b=',a*b)
+print('a/b=',a/b)
+print('a//b=',a//b)
+print('a%b=',a%b)
+print('a**b=',a**b)
+
+case 2
+
+a=10.5
+b=2
+print('a+b=',a+b)
+print('a-b=',a-b)
+print('a*b=',a*b)
+print('a/b=',a/b)
+print('a//b=',a//b)
+print('a%b=',a%b)
+print('a**b=',a**b)
+
+
+
+Relational operator:
+=====================
+ > ->greater than
+ >=  ->greater than equal to
+ <   -> less than
+ <=  -> less than equal to
+
+
+a=10
+b=2
+print(a>b)  ->True
+print(b>a)   ->False
+print(True > True) ->False
+print(True >= True) ->True
+print(False > True) -> False
+print(10> True) -> True
+
+Equality Operators:
+====================
+== ->equal to
+!= ->not equal to
+
+print(10=20)  -> invalid
+print(10==20) -> False
+print(10!=20) -> True
+
+Logical Operators:
+==================
+and
+or
+not
+
+Boolean types behaviour:
+========================
+and -> if both arguments are True then only result is True
+or  -> if atleast one argument is True the result is True
+not ->Complement
+
+x and y:
+===========
+
+if x is evaluated to false return x otherwise y
+Ex:
+
+10 and 20
+0 and 20
+
+if first argument is zero then the result is zero other result is y
+
+x or y:
+===========
+
+if x is evaluates to True then result is  x otherwise y
+Ex:
+
+10 or 20 ->10
+0 or 20 -> 20
+
+not x:
+======
+if x is evaluates to False then result is True otherwise False
+
+not 10 ->False
+not 0 ->True
+
+Assignment operators:
+====================
++=  
+-=
+*=
+/=
+%=
+**=
+&=
+|=
+
+Eg:
+---
+x=10
+x+=20    or x=x+20
+print(x) #30
+
+Eg2:
+====
+x=10
+x&=5
+print(x)  #0
+
+Ternary Operator or Conditional Operator:
+=========================================
+syntax:
+ x = firstValue if condition else secondValue
+
+if condition is true then first value
+if condition is false then second value
+
+Ex:
+--
+a,b=10,20
+x=30 if a<b else 40
+print(x)
+
+Ex2:
+===
+Read two number from the keyboard and print minimum value
+using ternary condition
+
+sol:
+
+a=int(input("Enter the first number")
+b=int(input("Enter the second number))
+m=a if a<b else b
+print("m value is :",m)
+
+
+
+
+Identity Operators:
+==================
+We can use identity operators for address comparison
+There are 2 identity operators are available.
+1) is
+2) is not
+
+if r1 is r2 return True if both r1 and r2 pointing to the same object
+if r1 is not r2 return if both r1 and r2 are not pointing to the same object
+
+Note:
+-----
+is will compare address 
+=== will compare content 
+
+Ex:
+====
+a=10
+b=10
+c=20
+
+print(id(a))
+print(id(b))
+print(id(c))
+print(a is b) #True
+print(a is not b) #False
+
+
+
+Membership operators:
+====================
+we can use membership operators to check whether the given object
+present in the given collection(list,set,tuple..).
+
+in ->Returns True if the given object present in the specified collection
+not in -> Returns True if the given object not present in the specified collection
+
+Ex:
+====
+x="hello learning python"
+
+print('h' in x) #True
+print('d' in x) #False
+print ('d' not in x) #True
+print('python in x) #True
+
+l1=["apple","banana","orange","kiwi"]
+print("apple in l1) #True
+print("grapes" not in l1) #True
+
+
+Mathematical Functions(math module)
+====================================
+A module is collection of functions,variables and classess etc.
+
+math module that contains several function to perform mathematical oerations.
+
+import math 
+
+Once we can import the we can call any functions of that module.
+
+import math
+print(math.sqrt(16))
+print(math.pi) 
+
+
+some functions of math:
+======================
+ceil(x)
+floor(x)
+pow(x,y)
+factorial(x)
+gcd(x,y)
+sqrt(x)
+pi
+
+
+Write a python program to find area of circle.
+===============================================
+import math
+r=16
+print("area of circle is ", math.pi*(r**2))
+
+
+
+eval()
+=======
+eval function take a string and evaluate the result.
+
+Ex:
+===
+x=eval("10+20+30")
+print(x) #60
+
+l1= eval(input("enter list"))
+print(type(l1))
+print(l1)
+
+command Line Arguments:
+======================
+argv is not array it is a list. it is available in sys module
+The arguments which are passing at the time of execution are called command line arguments
+
+Ex:-  py test1.py 20 30
+
+ex:
+----
+test2.py
+
+from sys import argv
+print("The number of command line arguments : ",len(argv))
+print("The list of command line arguments:",argv)
+print("command line arguments one by one:")
+for x in argv:
+  print(x)
+
+
+python test2.y 10 20 30
+
+
+
+Exercise:
+=========
+1)write  a program to check whether the given number is in 
+ between 1 and 100?
+
+Conditional statements:
+=======================
+if
+if-else
+if-elif-else
+
+if:
+---
+An if statement executes a block of code only if the specified condition is True.
+
+Syntax:
+-------
+if condition :
+   #body of if conditions
+
+if-else:
+-------
+An if statement executes a block of code only if the specified condition is true.
+the else statement executes if the condition is false
+
+Syntax:
+--------
+if condition :
+   #body of if conditions
+else:
+   #else statements
+
+if-elif-else:
+=============
+syntax:
+-------
+if condition1:
+  #statements
+elif condition2:
+   #statements
+elif condition3:
+   #statements
+else:
+   #statement
+
+1)write a program read two integer values and compare it which is greater using if
+2)write a program read two integer values and compare it which is greater using if-else
+3) write a program read three  integer values and compare which is greater using if-else or if-elif-else
+
+
+
+
+
+
+
+
+
+Iterative statements:
+====================
+python supports 2 types of iterative statements.
+1)for loop
+2)while loop
+
+
+1) for loop:
+------------
+if we want to execute some actions for every element present in some
+sequence (it may be string or collection).
+
+syntax:
+--------
+ for in sequecne:
+	statements
+
+
+1)write a program to print hello 10times
+Ex:
+---
+for i in range(1,11):
+  print('hello')
+
+2)write a program to display 0 to 10
+Ex:
+--
+for i in range(0,11):
+  print(i)
+
+
+3)write a program to display odd numbers from 0 to 20
+for i in range(0,21):
+  if(i%2!=0):
+     print('oddnumber',i)
+
+4) write a program to display numbers 10 to 1 in descending order
+for i in range(10,0,-1):
+ print(i)
+
+5)write a program to sum of numbers present inside list, read list using input()
+ ex: [20,40,50,80]  =190
+
+ lt = eval(input('enter the list : '))
+ sum=0
+ for i in lt:
+    sum+=i  # sum=sum+i
+
+ print('sum of list values',sum)
+
+
+forloop with else -->assignment
+
+
+
+while loop:
+===========
+if we want to execute a group of statements iteratively 
+until some condition false.
+
+syntax:
+ while condition :
+    body
+
+
+1)write a program to print 1 to 10
+i=1
+while i<11:
+  print(i)
+  i+=1
+ 
+2)write a program to sum of first n number.
+ n=int(input('enter n number'))
+ i=1
+ sum=0
+ while i<=n:
+    sum+=i
+    i+=1
+
+ print('sum of n numbers',sum) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+sol:
+----
+n = int(input("enter the n number"))
+sum=0  
+i=1
+
+while i<=n:
+   sum+=i
+   i+=1
+
+print("sum of first n number:",sum)
+
+
+break:
+======
+we can use break statement inside loop execution based on some condition.
+
+
+continue:
+============
+we can use continue statment to skip the current iterationand 
+continue the next iteration.
+
+ex1:
+----
+write a program to print 1 to 10  and skip the 5 iteration using while loop
+
+i=1
+while i<=10:
+   if i==5:
+       i+=1
+       continue
+   print(i)
+   i+=1
+
+
+for i in range(1,11):
+    if(i==5):
+        continue
+    else:
+         print(i)
+
+2)
+ 
+i=1
+while i<=10:
+   if i==6:
+       break
+   print(i)
+   i+=1
+
+
+
+loops with else block:
+======================
+inside loop execution, if break statement not executed, then only
+else part will be executed.
+
+else means without break.
+
+cart = [10,20,30,40,50]
+
+for item in cart:
+    if item>=50:
+      print("we cannot pass the order:")
+      break
+    print item
+else:
+    print("all items proccesed successfully")
+
+
+2)
+The while condition is checked at the beginning of each iteration.
+The block of code inside while statement will execute as long as the condition is true
+
+when the condition becomes false and the loop runs normally, the else block will execute
+However, if the loop is terminated conditionally by either a break or return statement the else clause 
+wont be execute.
+
+syntax :
+--------
+while condition:
+    #block of code to run
+else:
+    #else block code block
+
+
+Exercise:
+=========
+Write a program to display *'s as Equivalent Triangle.
+
+
+What does end =’ do in Python?
+===============================
+The end parameter in the print function is used to add any string. At the end of the output of the print statement in python.
+
+By default, the print function ends with a newline.
+
+Passing the whitespace to the end parameter (end=‘ ‘) indicates that the end character has to be identified by whitespace and not a newline.
+
+For example:
+print("hello", end=" ")
+
+print("raju") 
+
+
+
+pass keyword:
+=============
+pass is a keyword in python
+in our programming syntactically if block is required
+which won't do anything then we can define that empty block with pass keyword.
+
+it an empty statement
+it is null statement
+it won't do anything
+
+
+Exercises:
+==========
+1)Program to reverse the given string .
+2)write a program to print characters at Odd position and even position for the given string.
+3) write a program to merge characters of 2 strings into a single by taking
+characters alternatively
+  input:
+       s1="ravi"
+       s2="teja"
+   Output: rtaevjia
+4)write a program to sort the characters of the string and print first Alphabet
+ symbol followed by numeric values.
+ input : B4A1D3
+ output : ABD134
+
+5)write a program to remove duplicate characters from the given string
+  Ex: ABCDABBCDABBBCCDDEEEF
+     output: ABCDEF           
+6)write a program to find the number of occurrence of each character present in
+  the given string.
+    input : ABBABCDDC
+    output : A-2,B-3,C-2,D-2
+
+7)write a program to display and count unique vowels present in the given word.
+  using list
+  Input: blueyondersoftwaresolutions
+    output: u e a i o =>5
+
+Assignments On Variable, Operator and Expression
+==================================================
+1. Write a program that asks the user for his name and then welcomes him. The output should look like this:
+
+Enter your name: Saksham
+Hello Saksham
+
+2. Write a program that prompts the user to enter two integers and display their sum on the screen.
+
+3. Write a program that prompts the user to input a Celsius temperature and outputs the equivalent temperature in Fahrenheit. The formula to convert the temperature is: F = 9/5 C + 32 where F is the Fahrenheit temperature and C is the Celsius temperature. 
+
+4. Write a program which accept principle, rate and time from user and print the simple interest. 
+The formula to calculate simple interest is: simple interest = principle x rate x time / 100 
+
+5. Write a program that accepts seconds from keyboard as integer. Your program should converts seconds in hours, minutes and seconds. Your output should like this :
+
+Enter seconds: 13400
+Hours: 3
+Minutes: 43
+Seconds: 20  
+
+6. Write a program that prompts the user to enter number in two variables and swap the contents of the variables. 
+
+7. Write a program that prompts the user to enter number in two variables and swap the contents of the variables.(Do not declare extra variable.)
+
+List:
+=====
+1. Write a program that accepts a list from user and print the alternate element of list.
+
+How many elements you want to enter? 6
+Enter 6 elements
+10
+20
+30
+40
+50
+60
+Alternate elements are:
+10
+30
+50
+
+2. Write a program that accepts a list from user. Your program should reverse the content of list and display it. Do not use reverse() method.
+
+3. Find and display the largest number of a list without using built-in function max(). Your program should ask the user to input values in list from keyboard. 
+
+4. Write a program that rotates the element of a list so that the element at the first index moves to the second index, the element in the second index moves to the third index, etc., and the element in the last index moves to the first index.
+
+How many elements you want to enter? 4
+Enter 4 elements
+sunday
+monday
+tuesday
+wednesday
+list before shifting ['sunday', 'monday', 'tuesday', 'wednesday']
+list after shifting ['wednesday', 'sunday', 'monday', 'tuesday']
+
+5. Write a program that input a string and ask user to delete a given word from a string.
+
+6. Write a program that reads a string from the user containing a date in the form mm/dd/yyyy. It should print the date in the form March 12, 2021.
+
+
+Dictionary:
+===========
+1)Write a program that reads string from user. Your program should create a dictionary having key as word length and value is count of words of that length. For example, if user enters 'A fat cat is on the mat'.
+
+Word	Word length
+A	1
+fat	3
+cat	3
+is	2
+on	2
+the	3
+mat	3
+The content of dictionary should be {1:1, 3:4, 2:2}
+
+2)Write a program to read 6 numbers and create a dictionary having keys EVEN and ODD. Dictionary's value should be stored in list. Your dictionary should be like:
+{'EVEN':[8,10,64], 'ODD':[1,5,9]}
